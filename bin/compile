@@ -57,7 +57,7 @@ if [ -f /etc/logstash/conf.d/fanhero.conf ]; then
     echo '-----> Found a Logstash configuration'
 else
     echo 'No logstash configuration found.  Installing...' | indent
-    curl -s 'https://raw.githubusercontent.com/fanhero/buildpack-logstash/fanhero.conf' | sudo tee /etc/logstash/conf.d/fanhero.conf > /dev/null
+    curl -s 'https://raw.githubusercontent.com/fanhero/buildpack-logstash/master/fanhero.conf' | sudo tee /etc/logstash/conf.d/fanhero.conf > /dev/null
 fi
 
 # Actually turn it on
