@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -f /opt/logstash/bin/logstash ]; then
+    echo 'Logstash'
+    exit 0
+else
+  exit 1
+fi

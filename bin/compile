@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# TODO: handle cache-dir build-dir
+
+indent() {
+    sed -u 's/^/      /'
+}
+
+# Install logstash
+echo 'deb http://packages.elastic.co/logstash/2.2/debian stable main' | sudo tee /etc/apt/sources.list.d/logstash-2.2.x.list
+sudo apt-get update
+sudo apt-get install logstash
+
+if [ -f /etc/logstash/conf.d/fanhero.conf ]; then
+    echo '-----> Found a Logstash configuration'
+else
+    echo 'No logstash configuration found' | indent
+    curl -s 'https://raw.githubusercontent.com/fanhero/buildpack-logstash/fanhero.conf' | sudo tee /etc/logstash/conf.d/fanhero.conf > /dev/null
+fi
+
+# Actually turn it on
+echo '-----> Starting Logstash with Fanhero config...'
+sudo /opt/logstash/bin/logstash -f /etc/logstash/fanhero.conf
