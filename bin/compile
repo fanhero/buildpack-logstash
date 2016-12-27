@@ -34,7 +34,6 @@ verify="sha1sum --check --warn"
 
 echo "-----> Installing Logstash..."
 
-$mkdir ${INIT_SCRIPT%/*}
 $mkdir $CACHE_DIR
 
 if [ ! -f "$CACHE_DIR/$LOGSTASH_PACKAGE" ]; then
