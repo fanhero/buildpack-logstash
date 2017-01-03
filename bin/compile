@@ -1,7 +1,6 @@
 #!/bin/bash
 
 BUILD_DIR=$1
-CACHE_DIR=$2
 
 curl --silent --location https://artifacts.elastic.co/downloads/logstash/logstash-5.1.1.tar.gz -o $BUILD_DIR/logstash-5.1.1.tar.gz
-tar -xzf $BUILD_DIR/logstash-5.1.1.tar.gz
+tar -xzf $BUILD_DIR/logstash-5.1.1.tar.gz -C $BUILD_DIR/logstash
