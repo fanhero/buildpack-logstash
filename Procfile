@@ -1,1 +1,1 @@
-web: /opt/logstash-5.1.1/logstash -f logstash.conf
+web: ~/logstash-5.1.1/logstash -f logstash.conf
