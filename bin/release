@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo "Logstash Installed!"
 # cat << EOF
 # ---
 # addons: []
