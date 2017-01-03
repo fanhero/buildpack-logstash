@@ -6,5 +6,5 @@
 # else
 #   exit 1
 # fi
-
+echo "HelloFramework"
 exit 0
