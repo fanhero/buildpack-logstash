@@ -2,3 +2,6 @@
 
  curl --silent --location https://artifacts.elastic.co/downloads/logstash/logstash-5.1.1.tar.gz -o /app/logstash-5.1.1.tar.gz
  tar -xzf /app/logstash-5.1.1.tar.gz
+ cd /app
+ pwd
+ ls -la
