@@ -1,1 +1,1 @@
-web: echo "lol"
+web: ./bin/logstash -f ./logstash.conf
