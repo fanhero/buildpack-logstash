@@ -1,4 +1,4 @@
 # #!/bin/bash
 
- curl --silent --location https://download.elastic.co/logstash/logstash/logstash-1.5.4.tar.gz
- tar -xzf ./logstash-1.4.2.tar.gz
+ curl --silent --location https://artifacts.elastic.co/downloads/logstash/logstash-5.1.1.tar.gz -o ./logstash-5.1.1.tar.gz
+ tar -xzf ./logstash-5.1.1.tar.gz
