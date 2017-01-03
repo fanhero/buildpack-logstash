@@ -1,7 +1,8 @@
 #!/bin/bash
 
 if type -p java; then
-    echo 'FanHero Logstash'
+	type -p java
+    echo "FanHero Logstash"
     exit 0
 else
 	echo "Java not installed!"
